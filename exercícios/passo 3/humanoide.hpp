@@ -20,5 +20,4 @@ class Humanoide final : public Robo
         void mover_braco_direito(int graus);
         void mover_perna_esquerda(int graus);
         void mover_perna_direita(int graus);
-        void separar_motores(int begin, int end, std::vector<Motor*>& v);
 };

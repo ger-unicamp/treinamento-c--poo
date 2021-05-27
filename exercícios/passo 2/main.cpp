@@ -27,11 +27,6 @@ int main()
         motores.push_back(Motor(10));
     }
 
-    // motor+motor;
-
-    robo.adicionar_motor(motor);
-    robo.adicionar_motor(motores);
-
     motor.rotacionar_g_graus(10000);
 
     std::cout << robo << std::endl;
