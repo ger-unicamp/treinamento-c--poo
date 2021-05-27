@@ -1,0 +1,99 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compiling main.cpp",
+            "type": "shell",
+            "command": "cl",
+            "args": [
+                "/c",
+                "/Zi",
+                "/ZI",
+                "main.cpp"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "compiling robo.cpp",
+            "type": "shell",
+            "command": "cl",
+            "args": [
+                "/c",
+                "/Zi",
+                "/ZI",
+                "robo.cpp"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "compiling motor.cpp",
+            "type": "shell",
+            "command": "cl",
+            "args": [
+                "/c",
+                "/Zi",
+                "/ZI",
+                "motor.cpp"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "compiling humanoide.cpp",
+            "type": "shell",
+            "command": "cl",
+            "args": [
+                "/c",
+                "/Zi",
+                "/ZI",
+                "humanoide.cpp"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "linking",
+            "type": "shell",
+            "command": "link",
+            "args": [
+                "humanoide.obj",
+                "main.obj",
+                "motor.obj",
+                "robo.obj",
+                "/OUT:\"robo.exe\"",
+                "/DEBUG"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
