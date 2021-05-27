@@ -11,14 +11,14 @@
                 "/c",
                 "/Zi",
                 "/ZI",
+                "/FS",
+                "/std:c++17",
                 "main.cpp"
             ],
             "group": "build",
             "presentation": {
-                // Reveal the output only if unrecognized errors occur.
                 "reveal": "silent"
             },
-            // Use the standard MS compiler pattern to detect errors, warnings and infos
             "problemMatcher": "$msCompile"
         },
         {
@@ -29,14 +29,14 @@
                 "/c",
                 "/Zi",
                 "/ZI",
+                "/FS",
+                "/std:c++17",
                 "robo.cpp"
             ],
             "group": "build",
             "presentation": {
-                // Reveal the output only if unrecognized errors occur.
                 "reveal": "silent"
             },
-            // Use the standard MS compiler pattern to detect errors, warnings and infos
             "problemMatcher": "$msCompile"
         },
         {
@@ -47,14 +47,14 @@
                 "/c",
                 "/Zi",
                 "/ZI",
+                "/FS",
+                "/std:c++17",
                 "motor.cpp"
             ],
             "group": "build",
             "presentation": {
-                // Reveal the output only if unrecognized errors occur.
                 "reveal": "silent"
             },
-            // Use the standard MS compiler pattern to detect errors, warnings and infos
             "problemMatcher": "$msCompile"
         },
         {
@@ -65,14 +65,14 @@
                 "/c",
                 "/Zi",
                 "/ZI",
+                "/FS",
+                "/std:c++17",
                 "humanoide.cpp"
             ],
             "group": "build",
             "presentation": {
-                // Reveal the output only if unrecognized errors occur.
                 "reveal": "silent"
             },
-            // Use the standard MS compiler pattern to detect errors, warnings and infos
             "problemMatcher": "$msCompile"
         },
         {
@@ -89,11 +89,15 @@
             ],
             "group": "build",
             "presentation": {
-                // Reveal the output only if unrecognized errors occur.
                 "reveal": "silent"
             },
-            // Use the standard MS compiler pattern to detect errors, warnings and infos
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "dependsOn":[
+                "compiling humanoide.cpp",
+                "compiling motor.cpp",
+                "compiling robo.cpp",
+                "compiling main.cpp"
+            ]
         }
     ]
 }

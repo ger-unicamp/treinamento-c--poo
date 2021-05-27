@@ -18,27 +18,35 @@ bool validar_robo(const Validavel& robo)
 
 void comecar_competicao(Robo& robo)
 {
+    std::cout << "Comecando a competicao..." << std::endl;
     robo.andar_frente();
+}
+
+void finalizar_competicao(Robo& robo)
+{
+    robo.parar();
+    std::cout << "Competicao finalizada!" << std::endl;
 }
 
 int main()
 {
     std::cout << "Iniciando o programa..." << std::endl;
 
-    Humanoide robo;
-    std::cout << robo << std::endl;
+    Humanoide humanoide;
+    std::cout << humanoide << std::endl;
 
-    if (validar_robo(robo))
+    if (validar_robo(humanoide))
     {
-        std::cout << "Robo esta apto para competir!" << std::endl;
+        std::cout << "O Humanoide esta apto para competir!" << std::endl;
     }
     else
     {
-        std::cout << "Robo nao esta apto para competir!" << std::endl;
+        std::cout << "O Humanoide nao esta apto para competir!" << std::endl;
         return 1;
     }
 
-    comecar_competicao(robo);
+    comecar_competicao(humanoide);
+    finalizar_competicao(humanoide);
 
     return 0;
 }

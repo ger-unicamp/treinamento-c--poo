@@ -19,8 +19,8 @@ g++ -o robo main.o robo.o
 Compilação no Windows (Visual Studio Tools)
 
 ```powershell
-cl /c /Zi /ZI /std:c++17 main.cpp
-cl /c /Zi /ZI /std:c++17 robo.cpp
+cl /c /Zi /ZI /FS /std:c++17 main.cpp
+cl /c /Zi /ZI /FS /std:c++17 robo.cpp
 link /DEBUG /OUT:"robo.exe" main.obj robo.obj
 ```
 
@@ -56,3 +56,35 @@ rodar com velocidade de rotacao X|Atribui uma nova velocidade de rotação ao mo
 rodar por T milissegundos|Atribui `true` ao atributo `ativo` e, após T milissegundos, atribui `false`
 rodar por G graus|Atribui `true` ao atributo `ativo` e, após G graus rotacionado, atribui `false`
 parar rotacao|Atribui `false` ao atributo `ativo`
+
+
+## Passo 3
+
+### Objetivo
+
+1. Entender classes abstratas
+2. Entender métodos abtratos
+3. Entender a diferença entre passagem por referência e por cópia
+4. Entender o conceito de "interface" ou classes puramente abstratas
+
+### Requisitos
+
+* Criar a classe Humanoide herdando da classe Robo. A classe Humanoide deverá conter os métodos:
+
+Método|Explicação
+:-:|:-
+Andar para frente|Método herdado da classe Robo
+Parar de Andar|Método herdado da classe Robo
+Mover o braço esquerdo|Método privado para movimentação do braço esquerdo
+Mover o braco direito|Método privado para movimentação do braço esquerdo
+
+Além dos atributos:
+
+Atributo|Explicação
+:-:|:-
+Preco (4k)|Herdado de Robo
+Nome (Humanoide)|Herdado de Robo
+Lista de motores (10 ao todo)|Herdado de Robo
+
+* Tornar a classe Robô abstrata. Os métodos andar e parar devem ser abstratos. O acesso aos atributos preço, nome e lista de motores devem ser modificados com visibilida à classe filha.
+* Criar a classe puramente abstrata Validavel com objetivo de verificar se um objeto é válido. A validação ocorrerá ao compararmos o nome, preco e quantidade de motores de um Robo.

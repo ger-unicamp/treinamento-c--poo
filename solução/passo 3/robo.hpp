@@ -19,4 +19,5 @@ class Robo : public Validavel
         void adicionar_motor(Motor motor);
         void adicionar_motor(const std::vector<Motor>& motores);
         virtual void andar_frente() = 0;
+        virtual void parar() = 0;
 };

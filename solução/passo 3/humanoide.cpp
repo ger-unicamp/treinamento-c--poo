@@ -78,3 +78,11 @@ bool Humanoide::validar() const
         this->preco == 4000.0 &&
         this->motores.size() == 10;
 }
+
+void Humanoide::parar()
+{
+    for (auto motor : motores)
+    {
+        motor.parar();
+    }
+}

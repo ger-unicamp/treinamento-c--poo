@@ -14,6 +14,7 @@ class Humanoide final : public Robo
     public:
         Humanoide();
         void andar_frente() override;
+        void parar() override;
         bool validar() const;
     private:
         void mover_braco_esquerdo(int graus);
