@@ -1,5 +1,25 @@
 # Roteiro
 
+Os exercícios deste treinamento estão separados por passos. Cada passo contém seus objetivos e requisitos a serem seguidos. Qualquer dúvida, não hesite em contatar a(s) pessoa(s) autora(s) deste treinamento.
+
+## Instalação C++ 
+
+Para compilar e depurar códigos em C++ é necessário a instalação destas ferramentas. Cada sistema operacional tem suas especificidades, abaixo deixo referências para instalação das ferramentas de compilação para Ubuntu (Linux) e Windows.
+
+### Windows
+
+Instalar o [Visual Studio](https://visualstudio.microsoft.com/pt-br/thank-you-downloading-visual-studio/?sku=Community&rel=16&apptype=desktop&tech=cplusplus&os=windows). Após o download, instalar a ferramenta selecionando os recursos de C++. Deixarei uma referência que um membro do GER, o Heigon (/heigon77), fez que contém o passo a passo da instalação dos recursos pelo Visual Studio [aqui](https://drive.google.com/file/d/1uGa-67JU3qBHCGWbG-iN3LoBIogirS_X/view?usp=sharing).
+
+Para uso do compilador `cl` e outras ferramentas como o `link`, basta abrir o Developer Command Prompt for VS2019.
+
+### Ubuntu (Linux)
+
+Para instalação no Ubuntu é preciso baixar ferramentas de build e o gcc apenas. No terminal digite:
+
+```bash
+sudo apt install build-essential gcc
+```
+
 ## Passo 1
 
 ### Objetivo
